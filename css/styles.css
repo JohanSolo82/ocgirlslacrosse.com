@@ -1,0 +1,432 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Fonts*/
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.aldrich-regular {
+  font-family: "Aldrich", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Body*/
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/*Header*/
+
+header h1 {
+    color: ghostwhite;
+    font-size: 1rem;
+    margin: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    border-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: red;
+    background-color: black;
+    background-image: linear-gradient(180deg,#3b3b3b 15%, #010203 70%);
+    max-width: none;
+    height: auto;
+    padding: 1rem;
+    box-shadow: 0 6px 5px #0003;
+}
+
+header a {
+    text-decoration: none;
+
+}
+
+#menuToggle {
+  position: absolute;
+  top: -1px;
+  width: 1px;
+  height: 1px;
+  border: none;
+  opacity: 0;
+  
+}
+
+label {
+  cursor: pointer; 
+  color: ghostwhite;
+}
+
+nav {
+  background-color: black;
+  color: ghostwhite;
+  height: 100vh;
+  left: -100vw; /* width of the menu */
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 100vw;
+}
+
+nav label {
+  line-height: 3;
+  margin-right: 1rem
+}
+
+nav li {
+    display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul a:link,
+ul a:visited,
+ul a:hover,
+ul a:active {
+  color: ghostwhite;
+}
+
+#menuToggle:checked + label + nav {
+  left: 0;
+  transition: 0.3s;
+}
+
+/*Main*/
+/*Main>Index*/
+#hero img {
+    width: 100%;
+}
+
+#news-bar {
+    color: ghostwhite;
+    background-color: darkslategray;
+    font-size: 1rem;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: .5rem;
+}
+
+#about {
+  text-align: center;
+  padding: 2rem;
+  background-color: firebrick;
+  color: ghostwhite;
+  h2 {
+    margin-bottom: 1rem;
+  }
+  p {
+    padding-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.carousel {
+  width: 100vw;
+  overflow: hidden;
+  position:relative;
+  display: flex;
+  img {
+    height: 50vw;
+  }
+}
+
+.wrapper {
+  display: flex;
+  animation: autoScroll 100s linear infinite;
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-1750px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*Main>Register*/
+.register {
+  background-image: url("/assets/images/group_pic_sunset.jpg");
+  background-size: cover;
+  min-height: 80vh;
+}
+
+.register h2 {
+    text-align: center;
+    color: ghostwhite;
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.reg-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    color: ghostwhite;
+  }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+
+    width: 80%;
+    background-color: firebrick;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px darkslategray;
+    padding: .5em;
+    margin: 1em;
+    p, ul {
+      padding: 1em 0 1em 0;
+    }
+}
+
+.card-title {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card-body {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.card-link {
+    font-size: 1.25rem;
+}
+
+/*Main>Camp*/
+.camp-head {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+#camp img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Main>Volunteer*/
+
+.volunteer {
+  background-image: url("/assets/images/crew_relaxing.jpg");
+  min-height: 80vh;
+  background-size: cover;
+}
+
+.volunteerBtn {
+  background-color: #3b3b3b;
+  color: ghostwhite;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  text-align: center;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px darkslategray;
+  font-size: 1.25rem;
+}
+
+.volunteer h2 {
+    text-align: center;
+    color: ghostwhite;
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*Main>FAQ*/
+
+#faqs {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 1em auto;
+  background-color: ghostwhite;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  article {
+    width: 90%;
+    margin-bottom: 1rem;
+    p {
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+/*Footer*/
+footer {
+    border-top: 1px solid #3b3b3b;
+    background-color: #010203;
+    text-align: center;
+    align-items: flex-start;
+    color: ghostwhite;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+/*Responsive*/
+
+@media (min-width: 750px) {
+  header > label,
+  nav label {
+    display: none;
+  }
+  
+  header h1 {
+    color: ghostwhite;
+    font-size: 1.75rem;
+    margin: 0;
+  }
+
+  nav {
+    background-color: transparent;
+    color: ghostwhite;
+    display: flex;
+    height: auto;
+    left: auto;
+    position: relative;
+    transform: none;
+    transition: none;
+    top: auto;
+    width: auto;  
+  }
+  
+  ul {
+    display: flex;
+  }
+
+  nav li {
+    display: inline-block;
+    font-size: 1rem;
+    color:ghostwhite;
+    margin-right: 1.25rem;
+  }
+  
+  ul a:link,
+  ul a:visited,
+  ul a:hover,
+  ul a:active {
+    color: ghostwhite;
+  }
+
+  #news-bar {
+    font-size: 1.5rem;
+  }
+
+  #about p {
+    width: 50%;
+  }
+
+  .register {
+    background-size: cover;
+    width: 100vw;
+    height: 75vh;
+  }
+
+  .reg-cards {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    color: ghostwhite;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+
+    width: 300px;
+    height: auto;
+    background-color: firebrick;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px darkslategray;
+    p, ul {
+      display: block;
+    }
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .card-body {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .card-link {
+    font-size: 1.25rem;
+  }
+
+  .carousel img {
+    height: 50vh;
+  }
+
+  @keyframes autoScroll {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-2700px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
